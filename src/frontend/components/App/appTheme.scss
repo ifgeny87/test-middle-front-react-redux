@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700&subset=cyrillic');
+
+$default-font: "Open Sans", sans-serif;
+$default-font-size: 11pt;
+$header-font: Oswald, sans-serif;
+$monospace-font: "Anonymous Pro", "Courier New", Courier;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $default-font;
+    font-size: $default-font-size;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+}
+
+code, pre {
+    font-family: $monospace-font;
+}
+
+#app {
+    width: 800px;
+    margin: 0 auto;
+}
