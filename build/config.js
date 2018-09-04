@@ -1,9 +1,9 @@
-const { join } = require('path');
+const { join } = require('path')
 
-const rootPath = join(__dirname, '..');
+const rootPath = join(__dirname, '..')
 
-const isProd = process.env.NODE_ENV === 'production';
-const isTest = process.env.NODE_ENV === 'test';
+const isProd = process.env.NODE_ENV === 'production'
+const isTest = process.env.NODE_ENV === 'test'
 
 module.exports = {
   rootPath,
@@ -15,6 +15,6 @@ module.exports = {
   vendors: [
     'react',
     'react-dom',
-    'react-router',
-  ],
-};
+    'react-router'
+  ]
+}

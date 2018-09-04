@@ -2,16 +2,18 @@ export default async (url, method = 'GET', body, headers) => {
   const mergedHeaders = {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    ...headers,
-  };
+    ...headers
+  }
 
-  return await fetch(
+  const res = await fetch(
     url,
     {
       method,
       headers: mergedHeaders,
-      body: body ? JSON.stringify(body) : null,
-    },
+      body: body ? JSON.stringify(body) : null
+    }
   )
-    .then(res => res.status < 300 ? res.json() : global.console.warn(res));
-};
+    .then(res => res.status < 300 ? res.json() : global.console.warn(res))
+
+  return res
+}

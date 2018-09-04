@@ -1,7 +1,7 @@
-const webpack = require('webpack');
-const { join } = require('path');
+const webpack = require('webpack')
+const { join } = require('path')
 
-const config = require('./config');
+const config = require('./config')
 
 module.exports = {
   mode: config.isProd ? 'production' : 'development',
@@ -12,29 +12,29 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         include: [config.srcPath],
-        use: ['babel-loader'],
-      },
-    ],
+        use: ['babel-loader']
+      }
+    ]
   },
 
   resolve: {
     alias: {
-      utils: join(config.srcPath, 'utils'),
+      utils: join(config.srcPath, 'utils')
     },
-    modules: ['node_modules'],
+    modules: ['node_modules']
   },
 
   devtool: config.isDev ? 'eval-source-map' : 'source-map',
 
-  plugins: [(() => {
+  plugins: [() => {
     const plugins = [
-      new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development') }),
-    ];
+      new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development') })
+    ]
 
     if (!config.isDev) {
-      plugins.push(new webpack.LoaderOptionsPlugin({ minimize: true }));
+      plugins.push(new webpack.LoaderOptionsPlugin({ minimize: true }))
     }
 
-    return plugins;
-  })],
-};
+    return plugins
+  }]
+}

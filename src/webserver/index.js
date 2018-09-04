@@ -1,1 +1,1 @@
-require('./init')(process.env.PORT || 3000);
+require('./init')(process.env.PORT || 3000)
