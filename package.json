@@ -2,10 +2,9 @@
   "name": "test-middle-front-react-redux",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {},
   "scripts": {
     "build": "NODE_ENV=production npm start",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest --coverage",
     "pretest": "eslint build src *.js"
   },
   "devDependencies": {
@@ -34,6 +33,7 @@
     "fs": "0.0.1-security",
     "html-webpack-plugin": "^3.2.0",
     "http": "0.0.0",
+    "jest": "^23.5.0",
     "jest-cli": "^23.5.0",
     "net": "^1.0.2",
     "node-sass": "^4.9.3",
